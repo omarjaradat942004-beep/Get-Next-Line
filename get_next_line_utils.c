@@ -6,7 +6,7 @@
 /*   By: omajarad <omajarad@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/27 11:26:34 by omajarad          #+#    #+#             */
-/*   Updated: 2026/09/30 15:19:38 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/10/01 14:08:11 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 size_t	ft_strlen(const char *s)
 {
 	size_t	index;
-	
 
 	if (!s)
 		return (0);
@@ -26,8 +25,6 @@ size_t	ft_strlen(const char *s)
 	}
 	return (index);
 }
-
-
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -70,23 +67,19 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	index2 = 0;
 	while (s2[index2])
-	{
-		ptr[index] = s2[index2];
-		index++;
-		index2++;
-	}
+		ptr[index++] = s2[index2++];
 	ptr[index] = '\0';
 	return (ptr);
 }
 
-char    *ft_extract_fill_line(char *stash)
+char	*ft_extract_fill_line(char *stash)
 {
-        size_t  index;
-	size_t  length;
-        char    *line;
+	size_t	index;
+	size_t	length;
+	char	*line;
 
 	index = 0;
-        while (stash[index] && stash[index] != '\n')
+	while (stash[index] && stash[index] != '\n')
 		index++;
 	if (stash[index] == '\n')
 		index++;
@@ -103,14 +96,13 @@ char    *ft_extract_fill_line(char *stash)
 	return (line);
 }
 
-
 char	*saves_update(char *buffer)
 {
 	size_t	index;
 	char	*new_buffer;
 	size_t	start;
 	size_t	length;
-	
+
 	index = 0;
 	while (buffer[index] && buffer[index] != '\n')
 		index++;
