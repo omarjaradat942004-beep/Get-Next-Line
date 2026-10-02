@@ -6,7 +6,7 @@
 /*   By: omajarad <omajarad@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/27 11:26:34 by omajarad          #+#    #+#             */
-/*   Updated: 2026/10/01 14:08:11 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/10/02 16:28:31 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,30 +46,21 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char	*ptr;
-	size_t	index;
-	size_t	index2;
+	unsigned char	*ptr3;
+	unsigned char	*ptr4;
+	size_t			index;
 
-	if (!s1)
-		s1 = "";
-	index = ft_strlen(s1);
-	index2 = ft_strlen(s2);
-	ptr = malloc ((sizeof(char) * (index + index2)) + 1);
-	if (!ptr)
-		return (NULL);
-	index2 = 0;
-	while (s1[index2])
+	index = 0;
+	ptr3 = (unsigned char *)(src);
+	ptr4 = (unsigned char *)(dest);
+	while (index < n)
 	{
-		ptr[index2] = s1[index2];
-		index2++;
+		ptr4[index] = ptr3[index];
+		index++;
 	}
-	index2 = 0;
-	while (s2[index2])
-		ptr[index++] = s2[index2++];
-	ptr[index] = '\0';
-	return (ptr);
+	return (ptr4);
 }
 
 char	*ft_extract_fill_line(char *stash)

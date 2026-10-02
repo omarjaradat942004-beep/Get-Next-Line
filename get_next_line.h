@@ -6,7 +6,7 @@
 /*   By: omajarad <omajarad@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/27 11:26:16 by omajarad          #+#    #+#             */
-/*   Updated: 2026/10/01 14:14:29 by omajarad         ###   ########.fr       */
+/*   Updated: 2026/10/02 16:29:20 by omajarad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 char	*get_next_line(int fd);
 size_t	ft_strlen(const char *s);
 char	*ft_strchr(const char *s, int c);
-char	*ft_strjoin(char const *s1, char const *s2);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
 char	*ft_extract_fill_line(char *stash);
 char	*saves_update(char *buffer);
 
